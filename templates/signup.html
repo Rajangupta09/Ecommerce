@@ -1,0 +1,40 @@
+
+<!DOCTYPE html> 
+{% load static%} 
+<html lang="en">
+  <head>
+    <title>YourShop</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>SignUp Form</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    </head>
+    
+<style>
+ #colo{
+   background-color:whitesmoke;
+   padding-top:50px;
+ }
+
+</style>
+<body id = "colo">
+<div class = "container">
+  <form action = "" method = "post" novalidate>
+  {% csrf_token %}
+  {% for fm in form %}
+
+        {{ fm.label_tag}} 
+        {{fm}}
+         {{fm.errors|striptags}}<br><br>
+
+  {% endfor%}
+   
+<input type = "submit" value = "Submit">
+</form>
+
+</div>
+
+</body>
+
+</html>
+    
