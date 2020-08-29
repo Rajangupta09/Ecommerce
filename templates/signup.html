@@ -12,27 +12,24 @@
     
 <style>
  #colo{
-   background-color:whitesmoke;
-   padding-top:50px;
+   background-color:aqua;
+   padding-top: 50px;
  }
 
 </style>
 <body id = "colo">
-<div class = "container">
-  <form action = "" method = "post" novalidate>
-  {% csrf_token %}
-  {% for fm in form %}
+      <div class = "container">
+        <form action = "" method = "post" novalidate>
+        {% csrf_token %}
+        {% for fm in form %}
+              {{ fm.label_tag}} 
+              {{fm}}
+              {{fm.errors|striptags}}<br><br>
+        {% endfor%}
+      <input type = "submit" value = "Submit">
+      </form>
 
-        {{ fm.label_tag}} 
-        {{fm}}
-         {{fm.errors|striptags}}<br><br>
-
-  {% endfor%}
-   
-<input type = "submit" value = "Submit">
-</form>
-
-</div>
+      </div>
 
 </body>
 

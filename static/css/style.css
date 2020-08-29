@@ -1646,20 +1646,24 @@ h1, h2, h3, h4, h5,
     -ms-transform: scale(1.05);
     transform: scale(1.05); }
 
-.testimonial-wrap .owl-nav {
-  display: none; }
+/* .testimonial-wrap .owl-nav {
+  display: none; } */
 
-.section-sub-title {
+.section-sub-title
+ {
   font-size: 13px;
   color: #adb5bd;
   letter-spacing: .2em;
   text-transform: uppercase;
-  font-weight: 700; }
+  font-weight: 700; 
+}
 
-.section-title {
+.section-title 
+{
   color: #000;
   font-size: 40px;
-  font-weight: 900; }
+  font-weight: 900; 
+}
   @media (max-width: 991.98px) {
     .section-title {
       font-size: 30px; } }
@@ -1671,7 +1675,7 @@ h1, h2, h3, h4, h5,
   position: absolute;
   bottom: -10px;
   right: -10px;
-  background: #46ddb0;
+  background: #46dd92;
   padding: 20px; }
   @media (max-width: 991.98px) {
     .experience {
@@ -1688,7 +1692,7 @@ h1, h2, h3, h4, h5,
   .experience .caption {
     color: #fff;
     text-transform: uppercase; }
-
+ 
 .footer-subscribe .btn {
   height: 43px; }
 
@@ -1758,8 +1762,8 @@ h1, h2, h3, h4, h5,
   transition: .3s all ease; }
 
 .wishlist.active span, .wishlist:hover span {
-  color: #f23a2e; }
-
+  color:red; }
+/*
 .get-notification {
   text-align: center; }
   .get-notification h2 {
@@ -1782,7 +1786,7 @@ h1, h2, h3, h4, h5,
       font-style: italic; }
     .get-notification .form-control:-moz-placeholder {
       color: rgba(255, 255, 255, 0.5);
-      font-style: italic; }
+      font-style: italic; } */
 
 .product-item-2 .price del {
   color: #adb5bd; }
@@ -1790,7 +1794,7 @@ h1, h2, h3, h4, h5,
 .product-item-2 .number {
   font-size: 8rem;
   font-weight: 900;
-  color: #e9ecef;
+  color:gainsboro;
   position: absolute;
   line-height: 0;
   top: 40px;

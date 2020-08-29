@@ -11,6 +11,9 @@ def shop_template(request):
 def product_template(request):
     return render(request,'products.html')
 
+def blog_template(request):
+    return render(request,'blog.html')
+
 # SignUpForm
 def sign_up(request):
     if request.method == "POST":

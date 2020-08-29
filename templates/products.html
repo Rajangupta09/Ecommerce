@@ -1,95 +1,8 @@
-<!DOCTYPE html>
-<!-- Loading Static Files -->
-{% load static%} 
-<html lang="en">
-  <head>
-    <title>YourShop</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    
-    <link href="{% static 'https://fonts.googleapis.com/css?family=Muli:300,400,700,900' %}" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'fonts/icomoon/style.css' %}">
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static 'ss/jquery-ui.css' %}">
-    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/jquery.fancybox.min.css '%}">
-    <link rel="stylesheet" href="{% static 'css/bootstrap-datepicker.css' %}">
-    <link rel="stylesheet" href="{% static 'fonts/flaticon/font/flaticon.css' % }">
-    <link rel="stylesheet" href="{% static 'css/aos.css'%}">
-    <link rel="stylesheet" href="{% static 'css/style.css'%}">
-    
-  </head>
-  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-  
-  <div class="site-wrap">
-
-    <div class="site-mobile-menu site-navbar-target">
-      <div class="site-mobile-menu-header">
-        <div class="site-mobile-menu-close mt-3">
-          <span class="icon-close2 js-menu-toggle"></span>
-        </div>
-      </div>
-      <div class="site-mobile-menu-body"></div>
-    </div>
-   
-    <div class="top-bar py-3 bg-dark" id="home-section">
-      <div class="container">
-        <div class="row align-items-center">
-         
-          <div class="col-6 text-left">
-            <ul class="social-media">
-              <li><a href="#" class=""><span class="icon-facebook"></span></a></li>
-              <li><a href="#" class=""><span class="icon-twitter"></span></a></li>
-              <li><a href="#" class=""><span class="icon-instagram"></span></a></li>
-              <li><a href="#" class=""><span class="icon-youtube"></span></a></li>
-            </ul>
-          </div>
-          <div class="col-6">
-            <p class="mb-0 float-right">
-              <span class="mr-3"><a href="tel://#"> <span class="icon-phone mr-2" style="position: relative; top: 2px;"></span><span class="d-none d-lg-inline-block text-light">(+91) 9832322496</span></a></span>
-              <span><a href="#"><span class="icon-envelope mr-2" style="position: relative; top: 2px;"></span><span class="d-none d-lg-inline-block text-light">Yourshop@gmail.com</span></a></span>
-            </p>
-            
-          </div>
-        </div>
-      </div> 
-    </div>
-
-    <header class="site-navbar py-4 bg-white js-sticky-header site-navbar-target" role="banner">
-      <div class="container">
-        <div class="row align-items-center">
-          
-          <div class="col-6 col-xl-2">
-            <h1 class="mb-0 site-logo"><a href="index.html" class="text-black mb-0">YourShop<span class="text-primary">.</span> </a></h1>
-          </div>
-          <div class="col-12 col-md-10 d-none d-xl-block">
-            <nav class="site-navigation position-relative text-right" role="navigation">
-
-              <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
-                <li><a href="#home-section" class="nav-link">Home</a></li>
-                <li><a href="#products-section" class="nav-link">Products</a></li>
-                <li><a href="#kurti-section" class="nav-link">Kurti</a></li>
-                <li><a href="#special-section" class="nav-link">Dupatta</a></li>
-                <li><a href="#blog-section" class="nav-link">Leggings</a></li>
-                <li><a href="#about-section" class="nav-link">About Us</a></li>
-                <li><a href="#contact-section" class="nav-link">Contact</a></li>
-
-              </ul>
-            </nav>
-          </div>
-
-          <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black float-right"><span class="icon-menu h3"></span></a></div>
-
-        </div>
-      </div>
-      
-    </header>
-  
-    
-    <div class="site-blocks-cover overlay" id = " head" style="background-image: url(../static/images/banner-bg\.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+{% extends 'base.html' %}
+{% load static %}
+{% block content%}
+ 
+  <div class="site-blocks-cover overlay" id="head" style="background-image: url('../static/images/banner-bg.jpg');" data-aos="fade" data-stellar-background-ratio="0.5">
       <div class="container">
         <div class="row align-items-center justify-content-center">
 
@@ -109,10 +22,8 @@
           </div>
         </div>
       </div>
-    </div>  
+    </div>
 
-
-    <!-- ============ Product ============== -->
     <div class="site-section" id="products-section">
       <div class="container">
         <div class="row mb-5 justify-content-center">
@@ -128,7 +39,7 @@
           <div class="col-lg-4 col-md-6 mb-5">
             <div class="product-item">
               <figure>
-                <img src="{% static "images/download.jpeg" %}" alt="Image" class="img-fluid">
+                <img src="{% static 'images/download.jpeg' %}" alt="Image" class="img-fluid">
               </figure>
               <div class="px-4">
                 <h3><a href="#">Wild West Hoodie</a></h3>
@@ -148,7 +59,7 @@
           <div class="col-lg-4 col-md-6 mb-5">
             <div class="product-item">
               <figure>
-                <img src="{% static "images/images.jpeg" %} " alt="Image" class="img-fluid">
+                <img src="{% static 'images/images.jpeg' %} " alt="Image" class="img-fluid">
               </figure>
               <div class="px-4">
                 <h3><a href="#">Wild West Hoodie</a></h3>
@@ -168,7 +79,7 @@
           <div class="col-lg-4 col-md-6 mb-5">
             <div class="product-item">
               <figure>
-                <img src="{% static "images/download.jpeg" %}" alt="Image" class="img-fluid">
+                <img src="{% static 'images/download.jpeg' %}" alt="Image" class="img-fluid">
               </figure>
               <div class="px-4">
                 <h3><a href="#">Wild West Hoodie</a></h3>
@@ -188,7 +99,7 @@
           <div class="col-lg-4 col-md-6 mb-5">
             <div class="product-item">
               <figure>
-                <img src="{% static "images/model_4_bg.jpg" %}" alt="Image" class="img-fluid">
+                <img src="{% static 'images/model_4_bg.jpg'%}" alt="Image" class="img-fluid">
               </figure>
               <div class="px-4">
                 <h3><a href="#">Wild West Hoodie</a></h3>
@@ -208,7 +119,7 @@
           <div class="col-lg-4 col-md-6 mb-5">
             <div class="product-item">
               <figure>
-                <img src="{% static "images/model_5_bg.jpg" %}" alt="Image" class="img-fluid">
+                <img src="{% static 'images/model_5_bg.jpg'%}" alt="Image" class="img-fluid">
               </figure>
               <div class="px-4">
                 <h3><a href="#">Wild West Hoodie</a></h3>
@@ -228,7 +139,7 @@
           <div class="col-lg-4 col-md-6 mb-5">
             <div class="product-item">
               <figure>
-                <img src="{% static "images/product_1_bg.jpg" %}" alt="Image" class="img-fluid">
+                <img src="{% static 'images/product_1_bg.jpg'%}" alt="Image" class="img-fluid">
               </figure>
               <div class="px-4">
                 <h3><a href="#">Wild West Hoodie</a></h3>
@@ -248,86 +159,7 @@
           <div class="col-lg-4 col-md-6 mb-5">
             <div class="product-item">
               <figure>
-                <img src="{% static "images/product_1_bg.jpg" %}" alt="Image" class="img-fluid">
-              </figure>
-              <div class="px-4">
-                <h3><a href="#">Wild West Hoodie</a></h3>
-                <div class="mb-3">
-                  <span class="meta-icons mr-3"><a href="#" class="mr-2"><span class="icon-star text-warning"></span></a> 5.0</span>
-                  <span class="meta-icons wishlist"><a href="#" class="mr-2"><span class="icon-heart"></span></a> 29</span>
-                </div>
-                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-                <div>
-                  <a href="#" class="btn btn-black mr-1 rounded-0">Order Now</a>
-                  <a href="#" class="btn btn-black btn-outline-black ml-1 rounded-0">View</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="col-lg-4 col-md-6 mb-5">
-            <div class="product-item">
-              <figure>
-                <img src="{% static "images/product_1_bg.jpg" %}" alt="Image" class="img-fluid">
-              </figure>
-              <div class="px-4">
-                <h3><a href="#">Wild West Hoodie</a></h3>
-                <div class="mb-3">
-                  <span class="meta-icons mr-3"><a href="#" class="mr-2"><span class="icon-star text-warning"></span></a> 5.0</span>
-                  <span class="meta-icons wishlist"><a href="#" class="mr-2"><span class="icon-heart"></span></a> 29</span>
-                </div>
-                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-                <div>
-                  <a href="#" class="btn btn-black mr-1 rounded-0">Order Now</a>
-                  <a href="#" class="btn btn-black btn-outline-black ml-1 rounded-0">View</a>
-                </div>
-              </div>
-            </div>
-          </div>
-         
-          <div class="col-lg-4 col-md-6 mb-5">
-            <div class="product-item">
-              <figure>
-                <img src="{% static "images/product_1_bg.jpg" %}" alt="Image" class="img-fluid">
-              </figure>
-              <div class="px-4">
-                <h3><a href="#">Wild West Hoodie</a></h3>
-                <div class="mb-3">
-                  <span class="meta-icons mr-3"><a href="#" class="mr-2"><span class="icon-star text-warning"></span></a> 5.0</span>
-                  <span class="meta-icons wishlist"><a href="#" class="mr-2"><span class="icon-heart"></span></a> 29</span>
-                </div>
-                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-                <div>
-                  <a href="#" class="btn btn-black mr-1 rounded-0">Order Now</a>
-                  <a href="#" class="btn btn-black btn-outline-black ml-1 rounded-0">View</a>
-                </div>
-              </div>
-            </div>
-          </div>
-         
-          <div class="col-lg-4 col-md-6 mb-5">
-            <div class="product-item">
-              <figure>
-                <img src="{% static "images/product_1_bg.jpg" %}" alt="Image" class="img-fluid">
-              </figure>
-              <div class="px-4">
-                <h3><a href="#">Wild West Hoodie</a></h3>
-                <div class="mb-3">
-                  <span class="meta-icons mr-3"><a href="#" class="mr-2"><span class="icon-star text-warning"></span></a> 5.0</span>
-                  <span class="meta-icons wishlist"><a href="#" class="mr-2"><span class="icon-heart"></span></a> 29</span>
-                </div>
-                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-                <div>
-                  <a href="#" class="btn btn-black mr-1 rounded-0">Order Now</a>
-                  <a href="#" class="btn btn-black btn-outline-black ml-1 rounded-0">View</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 mb-5">
-            <div class="product-item">
-              <figure>
-                <img src="{% static "images/product_1_bg.jpg" %}" alt="Image" class="img-fluid">
+                <img src="{% static 'images/product_1_bg.jpg'%}" alt="Image" class="img-fluid">
               </figure>
               <div class="px-4">
                 <h3><a href="#">Wild West Hoodie</a></h3>
@@ -347,7 +179,27 @@
           <div class="col-lg-4 col-md-6 mb-5">
             <div class="product-item">
               <figure>
-                <img src="{%static "images/product_1_bg.jpg" %}" alt="Image" class="img-fluid">
+                <img src="{% static 'images/product_1_bg.jpg'%}" alt="Image" class="img-fluid">
+              </figure>
+              <div class="px-4">
+                <h3><a href="#">Wild West Hoodie</a></h3>
+                <div class="mb-3">
+                  <span class="meta-icons mr-3"><a href="#" class="mr-2"><span class="icon-star text-warning"></span></a> 5.0</span>
+                  <span class="meta-icons wishlist"><a href="#" class="mr-2"><span class="icon-heart"></span></a> 29</span>
+                </div>
+                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                <div>
+                  <a href="#" class="btn btn-black mr-1 rounded-0">Order Now</a>
+                  <a href="#" class="btn btn-black btn-outline-black ml-1 rounded-0">View</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-5">
+            <div class="product-item">
+              <figure>
+                <img src="{%static 'images/product_1_bg.jpg'%}" alt="Image" class="img-fluid">
               </figure>
               <div class="px-4">
                 <h3><a href="#">Wild West Hoodie</a></h3>
@@ -367,266 +219,8 @@
       </div>
     </div>
     
-   {% comment %} Kurti section  {% endcomment %}
-      <div class="site-section" id="kurti-section">
-      <div class="container">
-        <div class="row mb-5 justify-content-center">
-          <div class="col-md-6 text-center">
-            <h3 class="section-sub-title">Popular Kurtis</h3>
-            <h2 class="section-title mb-3">YourShop Kurti's</h2>
-            <p>" Indian kurtis are adaptable traditional clothing which has changed as Daily wear with time.
-               Indian designer kurtis are these days flaunted by the women with pants / jeans or with churidars and brings out best thing about them, 
-              which is their flexibility to oblige anything, but its practical.</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-4 col-md-6 mb-5">
-            <div class="kurti-section">
-              <figure>
-                <img src="{% static "images/download.jpeg" %}" alt="Image" class="img-fluid">
-              </figure>
-              <div class="px-4">
-                <h3><a href="#">Wild West Hoodie</a></h3>
-                <div class="mb-3">
-                  <span class="meta-icons mr-3"><a href="#" class="mr-2"><span class="icon-star text-warning"></span></a> 5.0</span>
-                  <span class="meta-icons wishlist"><a href="#" class="mr-2"><span class="icon-heart"></span></a> 29</span>
-                </div>
-                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-                <div>
-                  <a href="#" class="btn btn-black mr-1 rounded-0">Order Now</a>
-                  <a href="#" class="btn btn-black btn-outline-black ml-1 rounded-0">View</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-5">
-            <div class="kurti-section">
-              <figure>
-                <img src="{% static "images/images.jpeg" %} " alt="Image" class="img-fluid">
-              </figure>
-              <div class="px-4">
-                <h3><a href="#">Wild West Hoodie</a></h3>
-                <div class="mb-3">
-                  <span class="meta-icons mr-3"><a href="#" class="mr-2"><span class="icon-star text-warning"></span></a> 5.0</span>
-                  <span class="meta-icons wishlist active"><a href="#" class="mr-2"><span class="icon-heart"></span></a> 29</span>
-                </div>
-                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-                <div>
-                  <a href="#" class="btn btn-black mr-1 rounded-0">Order Now</a>
-                  <a href="#" class="btn btn-black btn-outline-black ml-1 rounded-0">View</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-5">
-            <div class="kurti-section">
-              <figure>
-                <img src="{% static "images/download.jpeg" %}" alt="Image" class="img-fluid">
-              </figure>
-              <div class="px-4">
-                <h3><a href="#">Wild West Hoodie</a></h3>
-                <div class="mb-3">
-                  <span class="meta-icons mr-3"><a href="#" class="mr-2"><span class="icon-star text-warning"></span></a> 5.0</span>
-                  <span class="meta-icons wishlist"><a href="#" class="mr-2"><span class="icon-heart"></span></a> 29</span>
-                </div>
-                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-                <div>
-                  <a href="#" class="btn btn-black mr-1 rounded-0">Order Now</a>
-                  <a href="#" class="btn btn-black btn-outline-black ml-1 rounded-0">View</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-5">
-            <div class="kurti-section">
-              <figure>
-                <img src="{% static "images/model_4_bg.jpg" %}" alt="Image" class="img-fluid">
-              </figure>
-              <div class="px-4">
-                <h3><a href="#">Wild West Hoodie</a></h3>
-                <div class="mb-3">
-                  <span class="meta-icons mr-3"><a href="#" class="mr-2"><span class="icon-star text-warning"></span></a> 5.0</span>
-                  <span class="meta-icons wishlist"><a href="#" class="mr-2"><span class="icon-heart"></span></a> 29</span>
-                </div>
-                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-                <div>
-                  <a href="#" class="btn btn-black mr-1 rounded-0">Order Now</a>
-                  <a href="#" class="btn btn-black btn-outline-black ml-1 rounded-0">View</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          
-
-          <div class="col-lg-4 col-md-6 mb-5">
-            <div class="kurti-section">
-              <figure>
-                <img src="{% static "images/product_1_bg.jpg" %}" alt="Image" class="img-fluid">
-              </figure>
-              <div class="px-4">
-                <h3><a href="#">Wild West Hoodie</a></h3>
-                <div class="mb-3">
-                  <span class="meta-icons mr-3"><a href="#" class="mr-2"><span class="icon-star text-warning"></span></a> 5.0</span>
-                  <span class="meta-icons wishlist"><a href="#" class="mr-2"><span class="icon-heart"></span></a> 29</span>
-                </div>
-                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-                <div>
-                  <a href="#" class="btn btn-black mr-1 rounded-0">Order Now</a>
-                  <a href="#" class="btn btn-black btn-outline-black ml-1 rounded-0">View</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-         
-
-          <div class="col-lg-4 col-md-6 mb-5">
-            <div class="kurti-section">
-              <figure>
-                <img src="{% static "images/product_1_bg.jpg" %}" alt="Image" class="img-fluid">
-              </figure>
-              <div class="px-4">
-                <h3><a href="#">Wild West Hoodie</a></h3>
-                <div class="mb-3">
-                  <span class="meta-icons mr-3"><a href="#" class="mr-2"><span class="icon-star text-warning"></span></a> 5.0</span>
-                  <span class="meta-icons wishlist"><a href="#" class="mr-2"><span class="icon-heart"></span></a> 29</span>
-                </div>
-                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-                <div>
-                  <a href="#" class="btn btn-black mr-1 rounded-0">Order Now</a>
-                  <a href="#" class="btn btn-black btn-outline-black ml-1 rounded-0">View</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-5">
-            <div class="kurti-section">
-              <figure>
-                <img src="{% static "images/product_1_bg.jpg" %}" alt="Image" class="img-fluid">
-              </figure>
-              <div class="px-4">
-                <h3><a href="#">Wild West Hoodie</a></h3>
-                <div class="mb-3">
-                  <span class="meta-icons mr-3"><a href="#" class="mr-2"><span class="icon-star text-warning"></span></a> 5.0</span>
-                  <span class="meta-icons wishlist"><a href="#" class="mr-2"><span class="icon-heart"></span></a> 29</span>
-                </div>
-                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-                <div>
-                  <a href="#" class="btn btn-black mr-1 rounded-0">Order Now</a>
-                  <a href="#" class="btn btn-black btn-outline-black ml-1 rounded-0">View</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 mb-5">
-            <div class="kurti-section">
-              <figure>
-                <img src="{% static "images/product_1_bg.jpg" %}" alt="Image" class="img-fluid">
-              </figure>
-              <div class="px-4">
-                <h3><a href="#">Wild West Hoodie</a></h3>
-                <div class="mb-3">
-                  <span class="meta-icons mr-3"><a href="#" class="mr-2"><span class="icon-star text-warning"></span></a> 5.0</span>
-                  <span class="meta-icons wishlist"><a href="#" class="mr-2"><span class="icon-heart"></span></a> 29</span>
-                </div>
-                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-                <div>
-                  <a href="#" class="btn btn-black mr-1 rounded-0">Order Now</a>
-                  <a href="#" class="btn btn-black btn-outline-black ml-1 rounded-0">View</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 mb-5">
-            <div class="kurti-section">
-              <figure>
-                <img src="{% static "images/product_1_bg.jpg" %}" alt="Image" class="img-fluid">
-              </figure>
-              <div class="px-4">
-                <h3><a href="#">Wild West Hoodie</a></h3>
-                <div class="mb-3">
-                  <span class="meta-icons mr-3"><a href="#" class="mr-2"><span class="icon-star text-warning"></span></a> 5.0</span>
-                  <span class="meta-icons wishlist"><a href="#" class="mr-2"><span class="icon-heart"></span></a> 29</span>
-                </div>
-                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-                <div>
-                  <a href="#" class="btn btn-black mr-1 rounded-0">Order Now</a>
-                  <a href="#" class="btn btn-black btn-outline-black ml-1 rounded-0">View</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 mb-5">
-            <div class="kurti-section">
-              <figure>
-                <img src="{% static "images/product_1_bg.jpg" %}" alt="Image" class="img-fluid">
-              </figure>
-              <div class="px-4">
-                <h3><a href="#">Wild West Hoodie</a></h3>
-                <div class="mb-3">
-                  <span class="meta-icons mr-3"><a href="#" class="mr-2"><span class="icon-star text-warning"></span></a> 5.0</span>
-                  <span class="meta-icons wishlist"><a href="#" class="mr-2"><span class="icon-heart"></span></a> 29</span>
-                </div>
-                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-                <div>
-                  <a href="#" class="btn btn-black mr-1 rounded-0">Order Now</a>
-                  <a href="#" class="btn btn-black btn-outline-black ml-1 rounded-0">View</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 mb-5">
-            <div class="kurti-section">
-              <figure>
-                <img src="{% static "images/product_1_bg.jpg" %}" alt="Image" class="img-fluid">
-              </figure>
-              <div class="px-4">
-                <h3><a href="#">Wild West Hoodie</a></h3>
-                <div class="mb-3">
-                  <span class="meta-icons mr-3"><a href="#" class="mr-2"><span class="icon-star text-warning"></span></a> 5.0</span>
-                  <span class="meta-icons wishlist"><a href="#" class="mr-2"><span class="icon-heart"></span></a> 29</span>
-                </div>
-                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-                <div>
-                  <a href="#" class="btn btn-black mr-1 rounded-0">Order Now</a>
-                  <a href="#" class="btn btn-black btn-outline-black ml-1 rounded-0">View</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mb-5">
-            <div class="kurti-section">
-              <figure>
-                <img src="{%static "images/product_1_bg.jpg" %}" alt="Image" class="img-fluid">
-              </figure>
-              <div class="px-4">
-                <h3><a href="#">Wild West Hoodie</a></h3>
-                <div class="mb-3">
-                  <span class="meta-icons mr-3"><a href="#" class="mr-2"><span class="icon-star text-warning"></span></a> 5.0</span>
-                  <span class="meta-icons wishlist"><a href="#" class="mr-2"><span class="icon-heart"></span></a> 29</span>
-                </div>
-                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-                <div>
-                  <a href="#" class="btn btn-black mr-1 rounded-0">Order Now</a>
-                  <a href="" class="btn btn-black btn-outline-black ml-1 rounded-0">View</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  
-
-
-  {% comment %} Featured products {% endcomment %}
-    <div class="site-blocks-cover inner-page-cover overlay get-notification"  style="background-image: url(../static/images/banner-1.jpg); background-attachment: fixed;" data-aos="fade">
+<!-- styling Section -->
+    <div class="site-blocks-cover inner-page-cover overlay get-notification"  style="background-image: url('../static/images/banner-1.jpg'); background-attachment: fixed;" data-aos="fade">
       <div class="container">
 
         <div class="row align-items-center justify-content-center">
@@ -636,6 +230,7 @@
       </div>
     </div>
 
+  <!-- Featured Products Section -->
     <div class="site-section bg-light">
       <div class="container">
         <div class="row mb-5 justify-content-center">
@@ -648,7 +243,7 @@
         <div class="bg-white py-4 mb-4">
           <div class="row mx-4 my-4 product-item-2 align-items-start">
             <div class="col-md-6 mb-5 mb-md-0">
-              <img src=" {% static "images/model_1_bg.jpg" %}" alt="Image" class="img-fluid">
+              <img src=" {% static 'images/model_1_bg.jpg'%}" alt="Image" class="img-fluid">
             </div>
            
             <div class="col-md-5 ml-auto product-title-wrap">
@@ -670,37 +265,38 @@
         </div>
 
         <div class="bg-white py-4">
-          <div class="row mx-4 my-4 product-item-2 align-items-start">
-            <div class="col-md-6 mb-5 mb-md-0 order-1 order-md-2">
-              <img src="{% static "images/product_1_bg.jpg"%}" alt="Image" class="img-fluid">
+                <div class="row mx-4 my-4 product-item-2 align-items-start">
+                  <div class="col-md-6 mb-5 mb-md-0 order-1 order-md-2">
+                    <img src="{% static 'images/product_1_bg.jpg'%}" alt="Image" class="img-fluid">
+                  </div>
+                
+                  <div class="col-md-5 mr-auto product-title-wrap order-2 order-md-1">
+                    <span class="number">02.</span>
+                    <h3 class="text-black mb-4 font-weight-bold">About This Product</h3>
+                    <p class="mb-4">Et tempora id nostrum saepe amet doloribus deserunt totam officiis cupiditate asperiores quasi accusantium voluptatum dolorem quae sapiente voluptatem ratione odio iure blanditiis earum fuga molestiae alias dicta perferendis inventore!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus soluta assumenda sed optio, error at?</p>
+                    
+                    <div class="mb-4"> 
+                      <h3 class="text-black font-weight-bold h5">Price:</h3>
+                      <div class="price"><del class="mr-2">$269.00</del> $69.00</div>
+                    </div>
+                    <p>
+                      <a href="#" class="btn btn-black btn-outline-black rounded-0 d-block mb-2 mb-lg-0 d-lg-inline-block">View Details</a>
+                      <a href="#" class="btn btn-black rounded-0 d-block d-lg-inline-block">Order Now</a>
+                    </p>
+                  </div>
+                </div>
+
             </div>
-           
-            <div class="col-md-5 mr-auto product-title-wrap order-2 order-md-1">
-              <span class="number">02.</span>
-              <h3 class="text-black mb-4 font-weight-bold">About This Product</h3>
-              <p class="mb-4">Et tempora id nostrum saepe amet doloribus deserunt totam officiis cupiditate asperiores quasi accusantium voluptatum dolorem quae sapiente voluptatem ratione odio iure blanditiis earum fuga molestiae alias dicta perferendis inventore!</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus soluta assumenda sed optio, error at?</p>
-              
-              <div class="mb-4"> 
-                <h3 class="text-black font-weight-bold h5">Price:</h3>
-                <div class="price"><del class="mr-2">$269.00</del> $69.00</div>
-              </div>
-              <p>
-                <a href="#" class="btn btn-black btn-outline-black rounded-0 d-block mb-2 mb-lg-0 d-lg-inline-block">View Details</a>
-                <a href="#" class="btn btn-black rounded-0 d-block d-lg-inline-block">Order Now</a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+       </div>
+     </div>
 
     <!-- About Us -->
     <div class="site-section html" id="about-section">
       <div class="container">
         <div class="row align-items-lg-center">
           <div class="col-md-8 mb-5 mb-lg-0 position-relative">
-            <img src="{% static "images/about_1.jpg" %}" class="img-fluid" alt="Image">
+            <img src="{% static 'images/about_1.jpg'%}" class="img-fluid" alt="Image">
             <div class="experience">
               <span class="year">Trusted Merchant</span>
               <span class="caption">for 50 years</span>
@@ -722,47 +318,46 @@
       <div class="container">
         <div class="row mb-5">
           <div class="col-12 text-center">
-            <h3 class="section-sub-title">Contact Us</h3>
+            <h3 class="section-sub-title">Contact Form</h3>
             <h2 class="section-title mb-3">Get In Touch</h2>
           </div>
         </div>
         <div class="row justify-content-center">
-          <div class="col-md-7 mb-3">
+          <div class="col-md-7 mb-5">
 
             <form action="#" class="p-5 bg-white">
-              
-              <h2 class="h3 text-black mb-5">Contact Form</h2> 
+              <h2 class="h4 text-black mb-5">Contact Form</h2> 
 
               <div class="row form-group">
                 <div class="col-md-6 mb-3 mb-md-0">
-                  <label class="text-black control-label" for="fname">First Name</label>
+                  <label class="text-black" for="fname">First Name</label>
                   <input type="text" id="fname" class="form-control rounded-0">
                 </div>
                 <div class="col-md-6">
-                  <label class="text-black control-label" for="lname">Last Name</label>
+                  <label class="text-black" for="lname">Last Name</label>
                   <input type="text" id="lname" class="form-control rounded-0">
                 </div>
               </div>
 
               <div class="row form-group">
+                
                 <div class="col-md-12">
-                  <label class="text-black control-label" for="email">Email</label> 
+                  <label class="text-black" for="email">Email</label> 
                   <input type="email" id="email" class="form-control rounded-0">
                 </div>
-
               </div>
 
               <div class="row form-group">
                 
                 <div class="col-md-12">
-                  <label class="text-black control-label" for="Phone Number">Phone Number</label> 
-                  <input type="Phone Numbert" id="Phone Number"  class="form-control rounded-0">
+                  <label class="text-black" for="subject">Subject</label> 
+                  <input type="subject" id="subject" class="form-control rounded-0">
                 </div>
               </div>
 
               <div class="row form-group">
                 <div class="col-md-12">
-                  <label class="text-black control-label" for="message">Message</label> 
+                  <label class="text-black" for="message">Message</label> 
                   <textarea name="message" id="message" cols="30" rows="7" class="form-control rounded-0" placeholder="Write your notes or questions here..."></textarea>
                 </div>
               </div>
@@ -773,6 +368,7 @@
                 </div>
               </div>
 
+  
             </form>
           </div>
         
@@ -780,75 +376,5 @@
         
       </div>
     </div>
+{% endblock %}
 
-  <!-- Foooter -->
-
-    <footer class="site-footer bg-white">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8">
-            <div class="row">
-              <div class="col-md-5">
-                <h2 class="footer-heading mb-4">About Us</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque facere laudantium magnam voluptatum autem. Amet aliquid nesciunt veritatis aliquam.</p>
-              </div>
-              <div class="col-md-3 ">
-                <h2 class="footer-heading mb-4">Quick Links</h2>
-                <ul class="list-unstyled">
-                  <li><a href="#">About Us</a></li>
-                  <li><a href="#">Services</a></li>
-                  <li><a href="#">Contact Us</a></li>
-                </ul>
-              </div>
-              <div class="col-md-4">
-                <h2 class="footer-heading mb-4">Follow Us</h2>
-                <ul class="social-media">
-                  <li><a href="#" class=""><span class="icon-facebook"></span></a></li>
-                  <li><a href="#" class=""><span class="icon-twitter"></span></a></li>
-                  <li><a href="#" class=""><span class="icon-instagram"></span></a></li>
-                  <li><a href="#" class=""><span class="icon-youtube"></span></a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3 ml-auto">
-            <h2 class="footer-heading mb-4">Featured Product</h2>
-            <a href="#"><img src="{% static "images/images.jpeg" %}" alt="Image" class="img-fluid mb-3"></a>
-            <h4 class="h5">Leather Brown Shoe</h4>
-            <strong class="text-black mb-3 d-inline-block">$60.00</strong>
-            <p><a href="#" class="btn btn-black rounded-0">Order Now</a></p>
-          </div>
-        </div>
-        <div class="row pt-5 mt-5 text-center">
-          <div class="col-md-12">
-            <div class="border-top pt-5">
-            <p>
-          Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by Aman Kumar Sahani
-
-        </p>
-            </div>
-          </div>
-          
-        </div>
-      </div>
-    </footer>
-
-  </div> <!-- .site-wrap -->
-
-  <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
-  <script src="{% static 'js/jquery-migrate-3.0.1.min.js' %}"></script>
-  <script src="{% static 'js/jquery-ui.js' %}"></script>
-  <script src="{% static 'js/popper.min.js'%}"></script>
-  <script src="{% static 'js/bootstrap.min.js'%}"></script>
-  <script src="{% static 'js/owl.carousel.min.js '% }"></script>
-  <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
-  <script src="{% static 'js/jquery.countdown.min.js'%}"></script>
-  <script src="{% static 'js/bootstrap-datepicker.min.js'%}"></script>
-  <script src="{% static 'js/jquery.easing.1.3.js'%}"></script>
-  <script src="{% static 'js/aos.js'%}"></script>
-  <script src="{% static 'js/jquery.fancybox.min.js'%}"></script>
-  <script src="{% static 'js/jquery.sticky.js' %}"></script>
-  <script src="{% static 'js/main.js'%}"></script>
-    
-  </body>
-</html>
